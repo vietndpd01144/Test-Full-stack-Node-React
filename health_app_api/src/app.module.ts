@@ -1,9 +1,26 @@
+import { UserModule } from './user/user.module';
+import { env } from './config/env.config';
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { GlobalCacheModule } from './config/cache.config';
 
+const environment = process.env.NODE_ENV || 'development';
 @Module({
-  imports: [],
+  imports: [
+    ConfigModule.forRoot({
+      envFilePath: `.env.${environment}`,
+      isGlobal: true,
+    }),
+    MongooseModule.forRoot(
+      `mongodb://localhost:${env.DATABASE.DATABASE_PORT}/${env.DATABASE.DATABASE_NAME}`,
+    ),
+
+    GlobalCacheModule,
+    UserModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
