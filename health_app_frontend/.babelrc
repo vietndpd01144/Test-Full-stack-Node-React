@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@common": "./src/common",
+          "@assets": "./src/assets",
+          "@config": "./src/config",
+          "@hooks": "./src/hooks",
+          "@layouts": "./src/layouts",
+          "@redux": "./src/redux",
+          "@routes": "./src/routes",
+          "@components": "./src/components",
+          "@pages": "./src/pages",
+          "@api": "./src/api"
+        }
+      }
+    ]
+  ]
+}

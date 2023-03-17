@@ -9,13 +9,12 @@ export class ValidateException extends HttpException {
     private convertValidationErrors(errors: ValidationError[], parent: ValidationError = null) {
         let newErrors = {
             status: HttpStatus.UNPROCESSABLE_ENTITY,
-            messages: {}
+            messages: []
         };
         errors.forEach((error) => {
             if (!parent || error.property !== parent.property) {
                 console.log(error.constraints);
-
-                newErrors.messages[error.property] = Object.values(error.constraints);
+                newErrors.messages.push(...Object.values(error.constraints));
             }
         });
         return newErrors;

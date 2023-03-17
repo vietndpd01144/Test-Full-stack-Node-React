@@ -21,7 +21,7 @@ export class AuthService {
         await this.userRepo.saveUser(signup.email, signup.name, hashedPassword);
         return {
             statusCode: HttpStatus.OK,
-            messages: 'Sing up successfully.'
+            message: 'Sing up successfully.'
         };
     }
 
@@ -31,7 +31,7 @@ export class AuthService {
         if (!user || !user.password || !bcrypt.compareSync(signInDto.password, user.password)) {
             throw new UnauthorizedException({
                 statusCode: HttpStatus.UNAUTHORIZED,
-                messages: 'email or password wrong'
+                message: 'email or password wrong'
             });
         }
         return await this.createLoginResponse(user.email, user.name, user._id.toHexString());
@@ -48,7 +48,7 @@ export class AuthService {
         );
         return {
             data: {
-                user: { email, name },
+                user: { id, email, name },
                 refreshToken: refreshToken,
                 token: accessToken
             },
