@@ -1,7 +1,6 @@
 export interface Exercise {
-    id: string;
-    title: string;
+    _id: string;
+    name: string;
     calories: number;
     time: number;
-    createAt: number;
 }

@@ -1,6 +1,6 @@
 export interface Diary {
-    id: string;
+    _id: string;
     title: string;
-    content: string;
-    createAt: number;
+    description: string;
+    createdAt: string;
 }

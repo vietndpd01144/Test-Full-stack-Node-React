@@ -1,10 +1,10 @@
-import { diaryReducer } from './slices/diarySlice/diary.slice';
-import { exerciseReducer, userReducer } from './slices';
+import { exerciseReducer, userReducer, blogReducer, diaryReducer } from './slices';
 import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
+import { foodReducer } from './slices/foodSlice/food.slice';
 
 const persistConfig = {
     key: 'root',
@@ -16,7 +16,9 @@ const persistConfig = {
 const rootReducer = combineReducers({
     user: userReducer,
     exercise: exerciseReducer,
-    diary: diaryReducer
+    diary: diaryReducer,
+    food: foodReducer,
+    blog: blogReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

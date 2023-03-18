@@ -1,6 +1,8 @@
 import knife from '@assets/icons/icon_knife.svg';
 import cup from '@assets/icons/cup.svg';
 import { useState } from 'react';
+import { useAppDispatch } from '@redux/store';
+import { filterFoodAction } from '@redux/slices/foodSlice/food.slice';
 interface Button {
     data: 'MORNING' | 'LUNCH' | 'DINNER' | 'SNACK';
     name: string;
@@ -8,6 +10,7 @@ interface Button {
 }
 
 const FoodFilterButtons: React.FC = () => {
+    const dispatch = useAppDispatch();
     const [buttonsObj] = useState<Button[]>([
         {
             data: 'MORNING',
@@ -30,12 +33,14 @@ const FoodFilterButtons: React.FC = () => {
             iconPath: knife
         }
     ]);
-    const handleClick = () => {};
+    const handleClick = (data: 'MORNING' | 'LUNCH' | 'DINNER' | 'SNACK') => {
+        dispatch(filterFoodAction(data));
+    };
     return (
         <div className="flex justify-center items-center">
             {buttonsObj.map((button: Button, index) => (
                 <div key={index} className="mx-[2.625rem] mt-[1.735rem] mb-[1.5625rem]">
-                    <button key={index} onClick={handleClick}>
+                    <button key={index} onClick={() => handleClick(button.data)}>
                         <div
                             className="h-[8.735rem] w-[7.25rem]  flex justify-center items-center"
                             style={{

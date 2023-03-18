@@ -1,69 +1,51 @@
+import { Food } from '@api/food/interfaces/food.interface';
 import food from '@assets/images/m01.png';
+import ImageItem from '@components/Image/ImageItem';
 import LoadMoreButton from '@components/button/LoadmoreButton';
-interface FoodItem {
-    type: 'MORNING' | 'LUNCH' | 'DINNER' | 'SNACK';
-    date: number;
-    image: string;
-}
+import { Status } from '@config/enum/status';
+import { fetchHistoryFoodAction, loadMoreFoodAction } from '@redux/slices/foodSlice/food.slice';
+import { useAppDispatch, useAppSelector } from '@redux/store';
+import { useEffect } from 'react';
+import { dateConvert } from 'src/util/convertTime';
 
-const FoodItem: React.FC<FoodItem> = ({ image }) => {
+const FoodItem: React.FC<Food> = ({ image, createdAt }) => {
     return (
         <div className="w-1/4">
             <div className="relative m-2">
-                <img className="w-full h-full" src={image} alt="" />
-                <div className="absolute bottom-0 left-0 bg-primary/300 p-[7px]">
-                    <p className="text-[15px] text-light">05.21.Lunch</p>
-                </div>
+                <ImageItem
+                    imagePath={process.env.REACT_APP_MEDIA_URL + image}
+                    text={`${dateConvert(createdAt).dateNoYear}.Lunch`}
+                />
             </div>
         </div>
     );
 };
 
-const foods: FoodItem[] = [
-    {
-        type: 'MORNING',
-        date: Date.now(),
-        image: food
-    },
-    {
-        type: 'MORNING',
-        date: Date.now(),
-        image: food
-    },
-    {
-        type: 'MORNING',
-        date: Date.now(),
-        image: food
-    },
-    {
-        type: 'MORNING',
-        date: Date.now(),
-        image: food
-    },
-    {
-        type: 'MORNING',
-        date: Date.now(),
-        image: food
-    },
-    {
-        type: 'MORNING',
-        date: Date.now(),
-        image: food
-    }
-];
 const ListFood: React.FC = () => {
-    const total = 100;
-    console.log(total > foods.length);
+    const { foods, totalCount, foodFetchStatus } = useAppSelector((state) => state.food);
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        dispatch(fetchHistoryFoodAction());
+    }, []);
 
-    return (
-        <div>
+    return foodFetchStatus === Status.LOADING ? (
+        <>Loading</>
+    ) : (
+        <div className="w-full">
             <div className="flex justify-start flex-wrap mb-6">
                 {foods.map((item, index) => (
                     <FoodItem key={index} {...item} />
                 ))}
             </div>
             <div className="flex justify-center">
-                {total > foods.length && <LoadMoreButton onClick={() => {}} label="記録をもっと見る" />}
+                {totalCount > foods.length && (
+                    <LoadMoreButton
+                        onClick={() => {
+                            dispatch(loadMoreFoodAction());
+                        }}
+                        label="記録をもっと見る"
+                    />
+                )}
             </div>
         </div>
     );

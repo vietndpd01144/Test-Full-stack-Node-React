@@ -1,7 +1,14 @@
-import { useAppSelector } from '@redux/store';
+import { Status } from '@config/enum/status';
+import { fetchExerciseAction } from '@redux/slices';
+import { useAppDispatch, useAppSelector } from '@redux/store';
+import { useEffect } from 'react';
 
 const ListExercise: React.FC = () => {
-    const { exercises } = useAppSelector((state) => state.exercise);
+    const { exercises, loadExercisesStatus } = useAppSelector((state) => state.exercise);
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        dispatch(fetchExerciseAction());
+    }, []);
     return (
         <div className="w-full  bg-dark/500 flex flex-col px-6 py-4 mt-[56px]">
             <div className="">
@@ -14,31 +21,35 @@ const ListExercise: React.FC = () => {
                 </div>
 
                 <div className="h-[12rem] overflow-scroll">
-                    <div className="flex justify-between flex-wrap">
-                        {exercises.map((exercises) => {
-                            return (
-                                <div
-                                    key={exercises.id}
-                                    className="w-[45%] inline-flex justify-between items-start  border-b-2 border-[#777777] h-fit mb-4 py-1"
-                                >
-                                    <div className="flex ">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-light mt-1.5"></div>
-                                        <div className="ml-3">
-                                            <p className="font-Noto_Sans_JP text-[15px] leading-[22px] text-light">
-                                                {exercises.title}
-                                            </p>
-                                            <p className="text-primary/300 text-[15px] leading-[18px]">
-                                                {exercises.calories}Kcal
-                                            </p>
+                    {loadExercisesStatus === Status.LOADING ? (
+                        <div className="flex mt-10 justify-center text-light">Loading...</div>
+                    ) : (
+                        <div className="flex justify-between flex-wrap">
+                            {exercises.map((exercises) => {
+                                return (
+                                    <div
+                                        key={exercises._id}
+                                        className="w-[45%] inline-flex justify-between items-start  border-b-2 border-[#777777] h-fit mb-4 py-1"
+                                    >
+                                        <div className="flex ">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-light mt-1.5"></div>
+                                            <div className="ml-3">
+                                                <p className="font-Noto_Sans_JP text-[15px] leading-[22px] text-light">
+                                                    {exercises.name}
+                                                </p>
+                                                <p className="text-primary/300 text-[15px] leading-[18px]">
+                                                    {exercises.calories}Kcal
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="text-[18px] leading-[22px] text-primary/300">
+                                            {exercises.time / 60} min
                                         </div>
                                     </div>
-                                    <div className="text-[18px] leading-[22px] text-primary/300">
-                                        {exercises.time / 60} min
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

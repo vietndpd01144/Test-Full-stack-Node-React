@@ -1,3 +1,5 @@
+import { JwtStrategy } from './strategies/jwt.strategy';
+import { UserService } from './services/user.service';
 import { env } from './../config/env.config';
 import { UserRepository } from './repositoies/user.repository';
 import { User, UserSchema } from './schemas/user.schema';
@@ -8,7 +10,7 @@ import { AuthService } from './services/auth.service';
 import { JwtModule } from '@nestjs/jwt';
 
 @Module({
-    providers: [AuthService, UserRepository],
+    providers: [UserService, AuthService, UserRepository, JwtStrategy],
     controllers: [AuthController],
     imports: [
         MongooseModule.forFeature([

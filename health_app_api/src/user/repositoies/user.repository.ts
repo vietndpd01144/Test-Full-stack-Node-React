@@ -1,3 +1,4 @@
+import { UserInformation } from './../interface/user.interface';
 import { SignupDto } from './../http/dto/signup.dto';
 import { User, UserDocument } from './../schemas/user.schema';
 import { InjectModel } from '@nestjs/mongoose';
@@ -16,10 +17,14 @@ export class UserRepository {
     }
 
     async saveUser(email: string, name: string, password: string) {
-        new this.useModel({ email, password, name }).save();
+        return await new this.useModel({ email, password, name }).save();
     }
 
     async findOneByEmail(email: string, select?: string[] | string) {
         return this.useModel.findOne({ email }).select(select);
+    }
+
+    async findOneById(id: string): Promise<UserInformation> {
+        return await this.useModel.findById(id);
     }
 }

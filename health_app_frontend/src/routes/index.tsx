@@ -5,6 +5,7 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import NoAuthRoute from './NotAuthRoute';
 import RecordPage from '@pages/RecordPage';
+import BlogPage from '@pages/BlogPage';
 const HomePage = lazy(() => import('@pages/HomePage'));
 const SignInPage = lazy(() => import('@pages/SignIn'));
 const SignUpPage = lazy(() => import('@pages/SignUp'));
@@ -20,6 +21,10 @@ const routesConfig: RouteObject[] = [
                     { index: true, element: <HomePage /> },
                     { path: '/my-record', element: <RecordPage /> }
                 ]
+            },
+            {
+                path: 'blog',
+                element: <BlogPage />
             }
         ]
     },

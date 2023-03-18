@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, ObjectId, Schema as sc } from 'mongoose';
+import { User } from 'src/user/schemas/user.schema';
 
 @Schema({ timestamps: true })
 export class BodyRecord {
@@ -8,10 +9,10 @@ export class BodyRecord {
         type: Number
     })
     weight: number;
-    @Prop({ required: true, type: String })
-    name: string;
-    @Prop({ required: true, type: String })
-    password: string;
+    @Prop({ required: true, type: Number })
+    fat_percentage: number;
+    @Prop({ required: true, type: sc.Types.ObjectId })
+    owner: User;
 }
 export type BodyRecordDocument = HydratedDocument<BodyRecord>;
 export const BodyRecordSchema = SchemaFactory.createForClass(BodyRecord);

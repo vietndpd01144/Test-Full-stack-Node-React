@@ -28,6 +28,7 @@ async function bootstrap() {
             }
         }
     });
+
     await app.listen(env.APP_PORT);
 }
 bootstrap();

@@ -1,22 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import "./assets/fonts/Inter/Inter-Regular.ttf";
-import "./assets/fonts/Inter/Inter-Medium.ttf";
-import "./assets/fonts/Inter/Inter-Bold.ttf";
-import "./assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf";
-import "./assets/fonts/Noto_Sans_JP/NotoSansJP-Medium.otf";
-import "./assets/fonts/Noto_Sans_JP/NotoSansJP-Bold.otf";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import './assets/fonts/Inter/Inter-Regular.ttf';
+import './assets/fonts/Inter/Inter-Medium.ttf';
+import './assets/fonts/Inter/Inter-Bold.ttf';
+import './assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf';
+import './assets/fonts/Noto_Sans_JP/NotoSansJP-Medium.otf';
+import './assets/fonts/Noto_Sans_JP/NotoSansJP-Bold.otf';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <React.StrictMode>
+    // <React.StrictMode>
     <App />
-  </React.StrictMode>
+    // {/* </React.StrictMode> */}
 );
 
 // If you want to start measuring performance in your app, pass a function

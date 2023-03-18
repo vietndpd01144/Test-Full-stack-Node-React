@@ -12,6 +12,11 @@ code {
     scroll-behavior: smooth;
 }
 
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -16,15 +16,17 @@ const BodyRecordChart: React.FC = () => {
             </div>
             <div className="flex mt-2 gap-3">
                 <button
-                    className={classNames('w-14 h-6 bg-light text-primary/300 rounded-xl', {
-                        'bg-primary/300 text-light': true
+                    className={classNames('w-14 h-6 rounded-xl', {
+                        'bg-primary/300 text-light': true,
+                        'bg-light text-primary/300': false
                     })}
                 >
                     日
                 </button>
                 <button
-                    className={classNames('w-14 h-6 bg-light text-primary/300 rounded-xl', {
-                        'bg-primary/300 text-light': true
+                    className={classNames('w-14 h-6 rounded-xl', {
+                        'bg-primary/300 text-light': true,
+                        'bg-light text-primary/300': false
                     })}
                 >
                     週
@@ -38,8 +40,9 @@ const BodyRecordChart: React.FC = () => {
                     月
                 </button>
                 <button
-                    className={classNames('w-14 h-6 bg-light text-primary/300 rounded-xl', {
-                        'bg-primary/300 text-light': true
+                    className={classNames('w-14 h-6 rounded-xl', {
+                        'bg-primary/300 text-light': true,
+                        'bg-light text-primary/300': false
                     })}
                 >
                     年
