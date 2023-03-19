@@ -1,3 +1,4 @@
+import { AddExerciseDto } from './../http/dto/add-exersice.dto';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Exercise, ExerciseDocument } from '../schemas/exercise.schema';
@@ -16,5 +17,9 @@ export class ExerciseRepository {
                 .select(['_id', 'name', 'time', 'calories']),
             totalRecord: await this.exerciseModel.count({ owner: id })
         };
+    }
+
+    async addExercise(userId: string, name: string, time: number, calories: number = 0) {
+        return await new this.exerciseModel({ name, time, calories, owner: userId }).save();
     }
 }

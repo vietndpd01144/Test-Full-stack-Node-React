@@ -1,11 +1,7 @@
 import { GetHistoryFoodDto } from './../http/dto/get-history-food.dto';
 import { UserInformation } from './../../user/interface/user.interface';
 import { FoodRepository } from './../repositories/food.repository';
-/*
-https://docs.nestjs.com/providers#services
-*/
-
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class FoodService {
@@ -13,6 +9,10 @@ export class FoodService {
 
     async getHistory(user: UserInformation, query: GetHistoryFoodDto) {
         const response = await this.foodRepo.getHistoryFood(user.id, query.type, query.limit, query.page);
-        return { data: response, message: 'Get history food successfully' };
+        return {
+            statusCode: HttpStatus.OK,
+            data: response,
+            message: 'Get history food successfully'
+        };
     }
 }

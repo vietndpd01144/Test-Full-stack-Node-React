@@ -1,5 +1,7 @@
+import { toast } from 'react-toastify';
+import { AddDiaryDataForm } from './interface';
 import { RootState } from './../../store';
-import { fetchDiaries } from '@api/diary/diaryApi';
+import { addDiary, fetchDiaries } from '@api/diary/diaryApi';
 import { Diary } from './../../../api/diary/interfaces/diary.interface';
 import { Status } from '@config/enum/status';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
@@ -10,12 +12,14 @@ interface DiaryState {
     page: number;
     totalCount: number;
     loadMoreStatus: Status;
+    addDiaryStatus: Status;
 }
 
 const initialState: DiaryState = {
     diaries: [],
     fetchDiaryStatus: Status.INITIAL,
     loadMoreStatus: Status.INITIAL,
+    addDiaryStatus: Status.INITIAL,
     totalCount: 0,
     limit: 8,
     page: 1
@@ -28,6 +32,13 @@ export const fetchDiariesAction = createAsyncThunk('diary/fetch-diaries', async 
         rejectWithValue(error);
     }
 });
+
+export const addDiaryAction = createAsyncThunk<any, AddDiaryDataForm>(
+    'diary/add-diary',
+    async (payload, { rejectWithValue }) => {
+        return await addDiary(payload);
+    }
+);
 
 export const loadMoreDiariesAction = createAsyncThunk(
     'diary/load-more-diaries',
@@ -63,14 +74,24 @@ const diarySlicer = createSlice({
             state.loadMoreStatus = Status.LOADING;
         });
         builder.addCase(loadMoreDiariesAction.fulfilled, (state, { payload }) => {
-            console.log(payload?.data.totalRecord);
-
             state.loadMoreStatus = Status.SUCCESS;
             state.diaries = [...state.diaries, ...(payload?.data.diaries as Diary[])];
             state.page = state.page + 1;
         });
         builder.addCase(loadMoreDiariesAction.rejected, (state) => {
             state.loadMoreStatus = Status.FAILED;
+        });
+
+        builder.addCase(addDiaryAction.pending, (state) => {
+            state.addDiaryStatus = Status.LOADING;
+        });
+        builder.addCase(addDiaryAction.fulfilled, (state, { payload }) => {
+            toast.success('Add diary successfully');
+            state.addDiaryStatus = Status.SUCCESS;
+        });
+        builder.addCase(addDiaryAction.rejected, (state) => {
+            toast.error('Add diary fail');
+            state.addDiaryStatus = Status.FAILED;
         });
     }
 });

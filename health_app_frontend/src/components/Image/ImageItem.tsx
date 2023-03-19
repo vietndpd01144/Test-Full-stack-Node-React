@@ -7,7 +7,7 @@ const ImageItem: React.FC<ImageItemInterface> = ({ text, imagePath }) => {
         <div className="relative">
             <img className="w-full h-full" src={imagePath} alt="" />
             <div className="absolute bottom-0 left-0 bg-primary/300 p-[7px]">
-                <p className="text-[15px] text-light">{text} </p>
+                <p className="text-[15px] text-light capitalize">{text} </p>
             </div>
         </div>
     );

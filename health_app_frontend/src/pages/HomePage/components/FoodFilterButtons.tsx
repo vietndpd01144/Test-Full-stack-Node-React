@@ -1,5 +1,4 @@
 import knife from '@assets/icons/icon_knife.svg';
-import cup from '@assets/icons/cup.svg';
 import { useState } from 'react';
 import { useAppDispatch } from '@redux/store';
 import { filterFoodAction } from '@redux/slices/foodSlice/food.slice';
@@ -37,9 +36,9 @@ const FoodFilterButtons: React.FC = () => {
         dispatch(filterFoodAction(data));
     };
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex flex-wrap justify-center items-center">
             {buttonsObj.map((button: Button, index) => (
-                <div key={index} className="mx-[2.625rem] mt-[1.735rem] mb-[1.5625rem]">
+                <div key={index} className="mx-[2.625rem] mt-[1.735rem] mb-[1.5625rem] max-w-[25%] lg:w-[50%]">
                     <button key={index} onClick={() => handleClick(button.data)}>
                         <div
                             className="h-[8.735rem] w-[7.25rem]  flex justify-center items-center"
@@ -49,7 +48,7 @@ const FoodFilterButtons: React.FC = () => {
                             }}
                         >
                             <div className="flex justify-center items-center flex-col">
-                                <img src={button.iconPath} />
+                                <img src={button.iconPath} alt="icon" />
                                 <p className="text-[20px] text-light">{button.name}</p>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import { exerciseReducer, userReducer, blogReducer, diaryReducer } from './slices';
+import { exerciseReducer, userReducer, blogReducer, diaryReducer, bodyRecordReducer } from './slices';
 import { combineReducers, configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
@@ -18,7 +18,8 @@ const rootReducer = combineReducers({
     exercise: exerciseReducer,
     diary: diaryReducer,
     food: foodReducer,
-    blog: blogReducer
+    blog: blogReducer,
+    bodyRecord: bodyRecordReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

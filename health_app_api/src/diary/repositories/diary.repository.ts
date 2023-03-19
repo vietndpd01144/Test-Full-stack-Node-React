@@ -17,4 +17,8 @@ export class DiaryRepository {
             totalRecord: await this.diaryModel.count({ owner: id })
         };
     }
+
+    async addDiary(title: string, description: string, userId: string) {
+        await new this.diaryModel({ description, title, owner: userId }).save();
+    }
 }

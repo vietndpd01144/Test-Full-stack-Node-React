@@ -7,7 +7,7 @@ const GoToTopButton: React.FC = () => {
                 window.scrollTo(0, 0);
             }}
         >
-            <img src={arrowUp} />
+            <img src={arrowUp} alt="arrow" />
         </button>
     );
 };

@@ -1,8 +1,9 @@
+import { AddDiaryDto } from './../dto/add-diary.dto';
 import { GetDiaryDto } from './../dto/get-diaries.dto';
 import { DiaryService } from './../../services/diary.service';
 import { JwtAuthGuard } from '../../../user/guards/jwt-auth.guard';
 import { CurrentUser } from '../../../user/decorators/current-user.decorator';
-import { Get, Post, Query, UseGuards } from '@nestjs/common';
+import { Body, Get, Post, Query, UseGuards } from '@nestjs/common';
 
 import { Controller } from '@nestjs/common';
 import { UserInformation } from 'src/user/interface/user.interface';
@@ -18,5 +19,7 @@ export class DiaryController {
     }
 
     @Post()
-    async addDiary() {}
+    async addDiary(@Body() data: AddDiaryDto, @CurrentUser() user: UserInformation) {
+        return await this.diaryService.addDiary(data, user.id);
+    }
 }

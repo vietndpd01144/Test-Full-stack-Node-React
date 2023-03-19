@@ -10,6 +10,7 @@ const ListDiary: React.FC = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchDiariesAction());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return fetchDiaryStatus === Status.LOADING ? (
@@ -20,7 +21,7 @@ const ListDiary: React.FC = () => {
             <div className="flex flex-wrap justify-start">
                 {diaries.map((diary) => {
                     return (
-                        <div key={diary._id} className="w-1/4 ">
+                        <div key={diary._id} className="w-1/4 lg:w-full">
                             <div className="m-2 p-4 pb-7 border-[1.5px] border-dark/400">
                                 <p className="text-[18px] leading-[22px] ">
                                     {dateConvert(diary.createdAt).date}
@@ -30,7 +31,9 @@ const ListDiary: React.FC = () => {
                                 <h5 className="font-medium font-Noto_Sans_JP text-xs h-8 text-ellipsis mt-2">
                                     {diary.title}
                                 </h5>
-                                <p className=" font-Noto_Sans_JP text-xs max-h-24 text-ellipsis">{diary.description}</p>
+                                <p className=" font-Noto_Sans_JP text-xs max-h-24 text-ellipsis overflow-hidden">
+                                    {diary.description}
+                                </p>
                             </div>
                         </div>
                     );

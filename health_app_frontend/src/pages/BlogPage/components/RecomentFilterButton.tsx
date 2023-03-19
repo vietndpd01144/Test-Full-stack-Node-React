@@ -27,11 +27,11 @@ const ReCommentFilter: React.FC = () => {
         }
     ];
     return (
-        <div className=" max-w-[60rem] m-auto pt-14">
-            <div className="flex justify-between mx-[-1rem]">
+        <div className=" max-w-[60rem] lg:max-w-[40rem] sm:max-w-[18rem] m-auto pt-14">
+            <div className="flex flex-wrap justify-between mx-[-1rem]">
                 {datas.map((data) => (
-                    <div key={data.data} className=" w-1/4 mx-4">
-                        <div className="bg-dark/600 px-2 py-6 flex flex-col justify-center items-center">
+                    <div key={data.data} className=" w-1/4 lg:w-1/2 sm:w-full">
+                        <div className="bg-dark/600 m-4 px-2 py-6 flex flex-col justify-center items-center aspect-5/3">
                             <p className="uppercase text-[22px] text-center leading-[27px]  text-primary/300">
                                 {data.name}
                             </p>

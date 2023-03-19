@@ -4,8 +4,11 @@ import { lazy } from 'react';
 import { RouteObject, createBrowserRouter } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import NoAuthRoute from './NotAuthRoute';
-import RecordPage from '@pages/RecordPage';
-import BlogPage from '@pages/BlogPage';
+const AddDiaryPage = lazy(() => import('@pages/AddDiaryPage'));
+const RecordPage = lazy(() => import('@pages/RecordPage'));
+const BlogPage = lazy(() => import('@pages/BlogPage'));
+const AddBodyRecordPage = lazy(() => import('@pages/AddBodyRecordPage'));
+const AddExercisePage = lazy(() => import('@pages/AddExrcisePage'));
 const HomePage = lazy(() => import('@pages/HomePage'));
 const SignInPage = lazy(() => import('@pages/SignIn'));
 const SignUpPage = lazy(() => import('@pages/SignUp'));
@@ -19,7 +22,10 @@ const routesConfig: RouteObject[] = [
                 element: <PrivateRoute />,
                 children: [
                     { index: true, element: <HomePage /> },
-                    { path: '/my-record', element: <RecordPage /> }
+                    { path: '/my-record', element: <RecordPage /> },
+                    { path: '/add-body-record', element: <AddBodyRecordPage /> },
+                    { path: '/add-exercise', element: <AddExercisePage /> },
+                    { path: '/add-diary', element: <AddDiaryPage /> }
                 ]
             },
             {

@@ -1,6 +1,5 @@
 import { Transform, TransformFnParams } from 'class-transformer';
-import { IsNumber, Min, IsString, ValidateIf, IsEnum } from 'class-validator';
-import { FoodType } from 'src/food/enums/food-type.enum';
+import { IsNumber, Min } from 'class-validator';
 export class GetDiaryDto {
     @Transform(({ value }: TransformFnParams) => Number.parseInt(value))
     @IsNumber()

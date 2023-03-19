@@ -1,7 +1,7 @@
 import { BlogRepository } from './../repositories/blog.repository';
 import { GetBlogsDto } from '../http/dto/get-blogs.dto';
 import { UserInformation } from '../../user/interface/user.interface';
-import { Injectable } from '@nestjs/common';
+import { Injectable, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class BlogService {
@@ -9,6 +9,10 @@ export class BlogService {
 
     async getBlogs(query: GetBlogsDto) {
         const response = await this.blogRepo.getBlog(query.limit, query.page);
-        return { data: response, message: 'Get blog successfully' };
+        return {
+            statusCode: HttpStatus.CREATED,
+            data: response,
+            message: 'Get blog successfully'
+        };
     }
 }

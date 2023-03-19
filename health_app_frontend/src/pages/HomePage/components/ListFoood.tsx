@@ -1,5 +1,4 @@
 import { Food } from '@api/food/interfaces/food.interface';
-import food from '@assets/images/m01.png';
 import ImageItem from '@components/Image/ImageItem';
 import LoadMoreButton from '@components/button/LoadmoreButton';
 import { Status } from '@config/enum/status';
@@ -8,13 +7,15 @@ import { useAppDispatch, useAppSelector } from '@redux/store';
 import { useEffect } from 'react';
 import { dateConvert } from 'src/util/convertTime';
 
-const FoodItem: React.FC<Food> = ({ image, createdAt }) => {
+const FoodItem: React.FC<Food> = ({ image, createdAt, type }) => {
     return (
-        <div className="w-1/4">
+        <div className="w-1/4 lg:w-1/2">
             <div className="relative m-2">
                 <ImageItem
                     imagePath={process.env.REACT_APP_MEDIA_URL + image}
-                    text={`${dateConvert(createdAt).dateNoYear}.Lunch`}
+                    text={`${dateConvert(createdAt).dateNoYear}.${type.charAt(0).toUpperCase()}${type
+                        .slice(1)
+                        .toLowerCase()}`}
                 />
             </div>
         </div>
@@ -26,6 +27,7 @@ const ListFood: React.FC = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchHistoryFoodAction());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return foodFetchStatus === Status.LOADING ? (

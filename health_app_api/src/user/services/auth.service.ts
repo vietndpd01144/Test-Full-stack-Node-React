@@ -7,6 +7,7 @@ import * as bcrypt from 'bcrypt';
 import { Cache } from 'cache-manager';
 import { LoginResponse } from '../interface/login-respose.interface';
 import { JwtService } from '@nestjs/jwt';
+import moment from 'moment';
 @Injectable()
 export class AuthService {
     constructor(
@@ -22,6 +23,18 @@ export class AuthService {
         return {
             statusCode: HttpStatus.OK,
             message: 'Sing up successfully.'
+        };
+    }
+
+    async signOut(token: string) {
+        const tokenExpireAt = ((await this.jwtService.decode(token)) as any).exp;
+        const blacklistTtl = tokenExpireAt - Date.now() / 1000;
+
+        console.log(blacklistTtl);
+
+        this.cacheManager.set(token, 1, 10000000000);
+        return {
+            statusCode: HttpStatus.OK
         };
     }
 

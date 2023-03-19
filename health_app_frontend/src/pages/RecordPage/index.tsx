@@ -7,7 +7,7 @@ import ListExercise from './components/ListExercise';
 const RecordPage: React.FC = () => {
     return (
         <>
-            <div className="mb-12 max-w-[60rem] m-auto">
+            <div className="mb-12 max-w-[60rem] lg:max-w-[40rem] sm:max-w-[18rem] m-auto">
                 <ListActions />
                 <BodyRecordChart />
                 <ListExercise />

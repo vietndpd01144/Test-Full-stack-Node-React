@@ -1,10 +1,8 @@
-import food from '@assets/images/m01.png';
 import ImageItem from '@components/Image/ImageItem';
 import LoadMoreButton from '@components/button/LoadmoreButton';
 import { fetchBlogAction, loadMoreBlogAction } from '@redux/slices';
 import { useAppDispatch, useAppSelector } from '@redux/store';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { dateConvert } from 'src/util/convertTime';
 
 const ListBog: React.FC = () => {
@@ -12,12 +10,13 @@ const ListBog: React.FC = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchBlogAction());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
-        <div className="w-[60rem] m-auto mt-14">
+        <div className="w-[60rem] lg:max-w-[40rem] sm:max-w-[18rem] m-auto mt-14">
             <div className="flex justify-start flex-wrap mb-6 mx-[-0.5rem]">
                 {blogs.map((item, index) => (
-                    <div key={item._id} className="w-1/4">
+                    <div key={item._id} className="w-1/4 lg:w-1/2 sm:w-full">
                         <div className="m-2">
                             <div className="">
                                 <ImageItem

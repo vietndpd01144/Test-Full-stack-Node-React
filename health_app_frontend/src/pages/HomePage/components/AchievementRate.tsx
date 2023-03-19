@@ -4,7 +4,10 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const AchievementRate: React.FC = () => {
     return (
-        <div className="w-2/5 bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url('${banner}')` }}>
+        <div
+            className="w-2/5 lg:w-full lg:py-10 bg-no-repeat bg-center bg-cover relative "
+            style={{ backgroundImage: `url('${banner}')` }}
+        >
             <div className="flex justify-center items-center h-full">
                 <div className="w-[11.25rem] h-[11.25rem] ">
                     <CircularProgressbarWithChildren

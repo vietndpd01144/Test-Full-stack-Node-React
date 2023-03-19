@@ -8,15 +8,17 @@ const HomePage: React.FC = () => {
     return (
         <>
             <div className="mb-12">
-                <div className=" flex h-[19.75rem] ">
+                <div className=" flex lg:flex-wrap h-[19.75rem] lg:h-auto ">
                     <AchievementRate />
-                    <div className="w-3/5 bg-dark/600 px-[56px] py-3">
+                    <div className="w-3/5 lg:w-full bg-dark/600 px-[56px] py-3">
                         <FatPercentageChart />
                     </div>
                 </div>
-                <FoodFilterButtons />
-                <div className="flex max-w-[60rem]  m-auto">
-                    <ListFood />
+                <div className="max-w-[60rem] lg:max-w-[40rem] m-auto">
+                    <FoodFilterButtons />
+                    <div className="flex">
+                        <ListFood />
+                    </div>
                 </div>
             </div>
             <GoToTopButton />

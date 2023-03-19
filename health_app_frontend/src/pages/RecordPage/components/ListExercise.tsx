@@ -8,6 +8,7 @@ const ListExercise: React.FC = () => {
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(fetchExerciseAction());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
         <div className="w-full  bg-dark/500 flex flex-col px-6 py-4 mt-[56px]">
@@ -20,7 +21,7 @@ const ListExercise: React.FC = () => {
                     <p className="ml-3 text-[22px] text-light">2021.05.21</p>
                 </div>
 
-                <div className="h-[12rem] overflow-scroll">
+                <div className="h-[12rem] overflow-y-scroll">
                     {loadExercisesStatus === Status.LOADING ? (
                         <div className="flex mt-10 justify-center text-light">Loading...</div>
                     ) : (
@@ -29,7 +30,7 @@ const ListExercise: React.FC = () => {
                                 return (
                                     <div
                                         key={exercises._id}
-                                        className="w-[45%] inline-flex justify-between items-start  border-b-2 border-[#777777] h-fit mb-4 py-1"
+                                        className="w-[45%] sm:w-full inline-flex justify-between items-start  border-b-2 border-[#777777] h-fit mb-4 py-1"
                                     >
                                         <div className="flex ">
                                             <div className="w-1.5 h-1.5 rounded-full bg-light mt-1.5"></div>
