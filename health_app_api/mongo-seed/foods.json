@@ -1,0 +1,400 @@
+[{
+  "_id": {
+    "$oid": "6414edfbab654618d5a8b04d"
+  },
+  "type": "LUNCH",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef58ab654618d5a8b055"
+  },
+  "type": "SNACK",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_3.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef5bab654618d5a8b056"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_4.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef5eab654618d5a8b057"
+  },
+  "type": "SNACK",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_6.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef62ab654618d5a8b058"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_3.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef65ab654618d5a8b059"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_1.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef73ab654618d5a8b05a"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_1.png",
+  "creteatedAtcreatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef77ab654618d5a8b05b"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_1.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef7aab654618d5a8b05c"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_1.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6414ef7dab654618d5a8b05d"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_1.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162eb5dc4be1e26f8d43bd"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_1.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162eb7dc4be1e26f8d43be"
+  },
+  "type": "LUNCH",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162eb9dc4be1e26f8d43bf"
+  },
+  "type": "LUNCH",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162ebbdc4be1e26f8d43c0"
+  },
+  "type": "LUNCH",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162ebedc4be1e26f8d43c1"
+  },
+  "type": "LUNCH",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162ec1dc4be1e26f8d43c2"
+  },
+  "type": "LUNCH",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162ec4dc4be1e26f8d43c3"
+  },
+  "type": "DINNER",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_5.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162ec7dc4be1e26f8d43c4"
+  },
+  "type": "DINNER",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162ec9dc4be1e26f8d43c5"
+  },
+  "type": "DINNER",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162f69dc4be1e26f8d43c6"
+  },
+  "type": "DINNER",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_2.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1677862800000"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64162f6cdc4be1e26f8d43c7"
+  },
+  "type": "MORNING",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  },
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "image": "/image_3.png",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "946659600000"
+    }
+  }
+}]

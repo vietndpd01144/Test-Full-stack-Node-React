@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "641352074bd2b7bcd700305b"
+  },
+  "email": "email1@gmail.com",
+  "name": "Vo Van Viet",
+  "password": "$2b$10$trV5KmoRpKXGD2AnW5gC2OIFXwJQ6Rf48n4zOjZPYX5AVpm5WEuAu",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678987783768"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678987783768"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "email": "email@gmail.com",
+  "name": "Vo Van Viet",
+  "password": "$2b$10$NMLjlqS9gPWgMFAz/PqGRu7uwxU16gK.kMpj6JjrPk00HzU2l7yF.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678988502058"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678988502058"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6413c75fff8b9c2dbc0a066f"
+  },
+  "email": "email11@gmail.com",
+  "name": "Vo van Viet",
+  "password": "$2b$10$qC79mkCcsFD8SU0IQYlBcuuLhpqQU3dvccvuiIKjlDBEhUGrOzwtq",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679017823496"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679017823496"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6413c83bff8b9c2dbc0a0672"
+  },
+  "email": "email12@gmail.com",
+  "name": "Viet",
+  "password": "$2b$10$SR/l3/6PGVRZbLc7XmqIIOg0/eTVUyT2OWu2IngPeLPOdyA43GX8u",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679018043142"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679018043142"
+    }
+  },
+  "__v": 0
+}]

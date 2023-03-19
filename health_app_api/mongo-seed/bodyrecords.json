@@ -1,0 +1,541 @@
+[{
+  "_id": {
+    "$oid": "6414bea5b1531f7280e6ecfb"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676661925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6414befb20c66198a94f9d0d"
+  },
+  "weight": 80,
+  "fat_percentage": 16.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1673465211755"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1678994811755"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6414bf2b59fcef98be329a1e"
+  },
+  "weight": 75,
+  "fat_percentage": 15.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671305259157"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081259157"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6414bf3e984ab20d64d1eda1"
+  },
+  "weight": 65,
+  "fat_percentage": 14.3,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668713278374"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081278374"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6414bf4dc4682ed89efb3d1b"
+  },
+  "weight": 64,
+  "fat_percentage": 13.4,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666034893673"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081293673"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6414bfc4e9afe7de14a9176b"
+  },
+  "weight": 70,
+  "fat_percentage": 14.8,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1663443012921"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081412921"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6415f299dc4be1e26f8d43aa"
+  },
+  "weight": 71,
+  "fat_percentage": 15.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1660764325106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6415f29bdc4be1e26f8d43ab"
+  },
+  "weight": 76,
+  "fat_percentage": 19.6,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1658085925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6415f29ddc4be1e26f8d43ac"
+  },
+  "weight": 80,
+  "fat_percentage": 18.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1655493925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64160012dc4be1e26f8d43ad"
+  },
+  "weight": 86,
+  "fat_percentage": 19.2,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1652815525106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64160014dc4be1e26f8d43ae"
+  },
+  "weight": 90,
+  "fat_percentage": 20.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650223525106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64160113dc4be1e26f8d43af"
+  },
+  "weight": 80,
+  "fat_percentage": 16.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679081211755"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081211755"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64160161dc4be1e26f8d43b0"
+  },
+  "weight": 90,
+  "fat_percentage": 20.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1650223525106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6416016bdc4be1e26f8d43b1"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1645125925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64160199dc4be1e26f8d43b2"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1645125925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64161676dc4be1e26f8d43b3"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678908325106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "641618c4dc4be1e26f8d43b4"
+  },
+  "weight": 80,
+  "fat_percentage": 16.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1678994811755"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081211755"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64161bc0dc4be1e26f8d43b6"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64161bc2dc4be1e26f8d43b7"
+  },
+  "weight": 72,
+  "fat_percentage": 14,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679167525106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64161bc4dc4be1e26f8d43b8"
+  },
+  "weight": 71,
+  "fat_percentage": 14.2,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679253925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64161bc7dc4be1e26f8d43b9"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676661925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64161bc9dc4be1e26f8d43ba"
+  },
+  "weight": 70,
+  "fat_percentage": 14.1,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1676661925106"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679081125106"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64164bc56fcf78f823703901"
+  },
+  "weight": 60,
+  "fat_percentage": 11,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679182789761"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679182789761"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64164bdc6fcf78f823703904"
+  },
+  "weight": 60,
+  "fat_percentage": 11,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679182812696"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679182812696"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64164c7b6fcf78f823703907"
+  },
+  "weight": 60,
+  "fat_percentage": 11,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679182971166"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679182971166"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64164c8c6fcf78f82370390a"
+  },
+  "weight": 60,
+  "fat_percentage": 11,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679182988456"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679182988456"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64164c916fcf78f82370390d"
+  },
+  "weight": 60,
+  "fat_percentage": 11,
+  "owner": {
+    "$oid": "641354d6c44e3486ace4851b"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1679182993259"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1679182993259"
+    }
+  },
+  "__v": 0
+}]
